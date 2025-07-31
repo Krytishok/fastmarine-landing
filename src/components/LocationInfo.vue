@@ -58,7 +58,7 @@ onMounted(() => {
         >
           <div class="image-wrapper">
             <img 
-              :src="`/src/assets/images/${item.image}`" 
+              :src="`../assets/images/${item.image}`" 
               :alt="item.title"
               class="location-image"
               loading="lazy"
