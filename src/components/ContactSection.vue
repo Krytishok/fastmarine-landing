@@ -5,7 +5,7 @@ const animated = ref(false)
 const phoneNumber = '+79089920649'
 
 // Формируем корректные ссылки для мессенджеров
-const telegramLink = `https://t.me/${phoneNumber.replace('+', '')}`
+const telegramLink = `https://t.me/Freeman19811`
 const whatsappLink = `https://wa.me/${phoneNumber.replace('+', '')}`
 
 onMounted(() => {
