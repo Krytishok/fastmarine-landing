@@ -1,5 +1,4 @@
 <script setup>
-import WaveDivider from './WaveDivider.vue'
 import { onMounted } from 'vue'
 
 const scrollToTours = () => {
@@ -246,6 +245,11 @@ onMounted(() => {
   
   .title-line {
     height: 3px;
+  }
+
+  .hero{
+    background: linear-gradient(135deg, rgba(0, 24, 48, 0.7) 0%, rgba(0, 48, 96, 0.5) 100%), 
+              url('../assets/images/mayak-mobile.png') no-repeat center center/cover;
   }
 }
 </style>

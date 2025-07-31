@@ -9,8 +9,7 @@ const fleet = [
     specs: [
       { label: "Длина", value: "5.2 м", icon: "mdi:ruler" },
       { label: "Вместимость", value: "6 человек", icon: "mdi:account-group" },
-      { label: "Мощность", value: "150 л.с.", icon: "mdi:engine" },
-      { label: "Год выпуска", value: "1999", icon: "mdi:calendar" }
+      { label: "Мощность", value: "150 л.с.", icon: "mdi:engine" }
     ],
     features: [
       "Удобные мягкие сиденья",
@@ -26,8 +25,7 @@ const fleet = [
     specs: [
       { label: "Длина", value: "5.1 м", icon: "mdi:ruler" },
       { label: "Вместимость", value: "5 человек", icon: "mdi:account-group" },
-      { label: "Мощность", value: "70 л.с.", icon: "mdi:engine" },
-      { label: "Год выпуска", value: "2014", icon: "mdi:calendar" }
+      { label: "Мощность", value: "70 л.с.", icon: "mdi:engine" }
     ],
     features: [
       "Закрытая кабина",
