@@ -92,7 +92,7 @@ onBeforeUnmount(() => {
       <div class="section-header" :class="{ 'animate-in': animated }">
         <h2 class="section-title">Галерея</h2>
         <div class="section-divider"></div>
-        <p class="section-subtitle">Увидьте эмоции наших гостей и красоту морских пейзажей</p>
+        <p class="section-subtitle">Взгляните на красоту морских пейзажей Приморья</p>
       </div>
       
       <div class="slider-wrapper">
