@@ -1,44 +1,31 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-
 const locationCards = [
   {
     title: "Яхт-клуб",
-    image: "view.jpg",
+    image: new URL('../assets/images/view.jpg', import.meta.url).href,
     description: "Находится левее Токаревского маяка, если смотреть со стороны парковки"
   },
   {
     title: "Наш баннер",
-    image: "banner_orient.jpg",
+    image: new URL('../assets/images/banner_orient.jpg', import.meta.url).href,
     description: "Именно здесь мы и располагаемся, если никого нет на месте, позвоните по номеру телефона на баннере"
   },
   {
     title: "Пирс",
-    image: "flags.jpg",
+    image: new URL('../assets/images/flags.jpg', import.meta.url).href,
     description: "Отсюда будет начинаться наше путешествие"
   }
 ]
 
-const animatedCards = ref(Array(locationCards.length).fill(false))
-
-onMounted(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const index = parseInt(entry.target.dataset.index)
-        animatedCards.value[index] = true
-      }
-    })
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  })
-
-  document.querySelectorAll('.location-card').forEach((card, index) => {
-    card.dataset.index = index
-    observer.observe(card)
-  })
-})
+// Функция для корректного формирования путей в dev и prod режимах
+const getImageUrl = (path) => {
+  if (import.meta.env.DEV) {
+    return path
+  } else {
+    // Для продакшена используем абсолютные пути
+    return new URL(path, import.meta.url).href
+  }
+}
 </script>
 
 <template>
@@ -54,11 +41,10 @@ onMounted(() => {
           v-for="(item, index) in locationCards" 
           :key="index" 
           class="location-card"
-          :class="{ 'animated': animatedCards[index] }"
         >
           <div class="image-wrapper">
             <img 
-              :src="`../assets/images/${item.image}`" 
+              :src="getImageUrl(item.image)" 
               :alt="item.title"
               class="location-image"
               loading="lazy"
@@ -75,6 +61,7 @@ onMounted(() => {
       
       <div class="cta-block">
         <h3 class="cta-title">Приходите и отправляйтесь в море!</h3>
+        <div class="divider"></div>
         <div class="contact-info">
           <div class="contact-item">
             <span class="icon">📍</span>
@@ -95,8 +82,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Montserrat:wght@300;400;600&display=swap');
-
 .location-info {
   padding: 6rem 0;
   background: linear-gradient(135deg, #f8fcff 0%, #e6f2ff 100%);
@@ -124,19 +109,14 @@ onMounted(() => {
   font-weight: 800;
   color: #2c3e50;
   margin-bottom: 1rem;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .title-line {
   height: 4px;
-  width: 0;
+  width: 150px;
   background: linear-gradient(90deg, #4fc1e9, #7fdbff);
   margin: 0 auto;
   border-radius: 2px;
-  animation: lineReveal 1s ease-out forwards;
-  animation-delay: 0.5s;
 }
 
 .location-cards {
@@ -152,26 +132,10 @@ onMounted(() => {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.location-card.animated {
-  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.location-card:nth-child(1).animated {
-  animation-delay: 0.2s;
-}
-.location-card:nth-child(2).animated {
-  animation-delay: 0.4s;
-}
-.location-card:nth-child(3).animated {
-  animation-delay: 0.6s;
 }
 
 .location-card:hover {
-  transform: translateY(-10px) !important;
+  transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(31, 140, 201, 0.15);
 }
 
@@ -179,6 +143,17 @@ onMounted(() => {
   height: 280px;
   overflow: hidden;
   position: relative;
+}
+
+.location-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.location-card:hover .location-image {
+  transform: scale(1.1);
 }
 
 .image-overlay {
@@ -196,17 +171,6 @@ onMounted(() => {
   opacity: 0.4;
 }
 
-.location-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.location-card:hover .location-image {
-  transform: scale(1.1);
-}
-
 .card-content {
   padding: 1.8rem;
 }
@@ -217,7 +181,6 @@ onMounted(() => {
   font-weight: 800;
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  position: relative;
 }
 
 .divider {
@@ -232,8 +195,6 @@ onMounted(() => {
   color: #555;
   line-height: 1.6;
   font-size: 1rem;
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
 }
 
 .cta-block {
@@ -245,11 +206,6 @@ onMounted(() => {
   margin: 0 auto;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 0.8s;
 }
 
 .cta-title {
@@ -290,7 +246,7 @@ onMounted(() => {
   font-weight: 700;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.3s;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   background: rgba(255,255,255,0.8);
@@ -301,27 +257,6 @@ onMounted(() => {
   background: #4fc1e9;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(79, 193, 233, 0.3);
-}
-
-/* Анимации */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes lineReveal {
-  from {
-    width: 0;
-  }
-  to {
-    width: 150px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -340,20 +275,6 @@ onMounted(() => {
   
   .contact-item, .phone-link {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .cta-title {
-    font-size: 1.5rem;
-  }
-  
-  .phone-link {
-    padding: 0.6rem 1.2rem;
   }
 }
 </style>
