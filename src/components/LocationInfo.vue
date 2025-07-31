@@ -61,7 +61,6 @@ const getImageUrl = (path) => {
       
       <div class="cta-block">
         <h3 class="cta-title">Приходите и отправляйтесь в море!</h3>
-        <div class="divider"></div>
         <div class="contact-info">
           <div class="contact-item">
             <span class="icon">📍</span>
