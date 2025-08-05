@@ -35,7 +35,7 @@ const scrollToTop = () => {
       <div class="section-header" :class="{ 'animate-in': animated }">
         <h2 class="section-title">Забронируйте прогулку</h2>
         <div class="section-divider"></div>
-        <p class="section-subtitle">Свяжитесь с нами прямо сейчас и получите скидку на прогулку</p>
+        <p class="section-subtitle">Свяжитесь с нами, чтобы организовать вашу идеальную прогулку.</p>
       </div>
       
       <!-- Основное содержимое -->

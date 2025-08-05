@@ -109,6 +109,7 @@ const scrollToContact = () => {
       <div class="section-header">
         <h2 class="section-title">Наши прогулки</h2>
         <div class="section-divider"></div>
+        <h3 class="info">Прогулка для 1–2 человек — 5 000₽. Если вас больше, добавляем по 1 000₽ за каждого</h3>
       </div>
       
       <div class="tours-grid">
@@ -218,11 +219,23 @@ const scrollToContact = () => {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: #1e293b;
+  color: #2f405b;
   margin-bottom: 1.5rem;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease-out forwards;
+}
+
+.info{
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.7rem, 4vw, 0.9rem);
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards
 }
 
 .section-divider {
