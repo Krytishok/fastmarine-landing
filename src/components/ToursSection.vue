@@ -6,7 +6,7 @@ const tours = ref([
     id: 1,
     title: 'Вокруг острова Елены',
     description: 'Незабываемое путешествие вокруг островов Уши и Елена. Самая популярная прогулка',
-    price: 6000,
+    price: 5000,
     image: new URL('../assets/images/ushi.jpg', import.meta.url).href,
     routeURL: 'https://www.google.com/maps/d/u/0/embed?mid=1bsvUle3jB9E_um53ehJj1HSTakVBARM&ehbc=2E312F&noprof=1',
     showRoute: false,
@@ -26,7 +26,7 @@ const tours = ref([
     id: 2,
     title: 'Под Золотой мост',
     description: 'Невероятное путешествие в самое сердце города. Прекрасные виды на мост и на центр города Владивосток',
-    price: 6000,
+    price: 5000,
     image: new URL('../assets/images/golden-bridge.jpg', import.meta.url).href,
     routeURL: 'https://www.google.com/maps/d/u/0/embed?mid=1WDe4Ad9oWvrOjHn76ik3fam8KmLKcJc&ehbc=2E312F&noprof=1',
     showRoute: false,
@@ -45,7 +45,7 @@ const tours = ref([
     id: 3,
     title: 'Под Русский мост',
     description: 'Фантастическая прогулка под самый красивый мост Приморского края, виды на о. Скрыплева и ДВФУ',
-    price: 6000,
+    price: 5000,
     image: new URL('../assets/images/russky-bridge.webp', import.meta.url).href,
     routeURL: 'https://www.google.com/maps/d/u/0/embed?mid=19EUReEy_MmANl1jkHjUcao3V0ppOMCs&ehbc=2E312F&noprof=1',
     showRoute: false,
@@ -123,7 +123,7 @@ const scrollToContact = () => {
             <div class="tour-image-wrapper">
               <img :src="tour.image" :alt="tour.title" class="tour-image">
               <div class="price-badge">
-                от {{ tour.price }} ₽
+                от {{ tour.price }} ₽ за прогулку
                 <div class="badge-wave"></div>
               </div>
             </div>
