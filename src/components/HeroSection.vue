@@ -50,8 +50,8 @@ onMounted(() => {
   padding: 0;
   overflow: hidden;
   font-family: 'Manrope', sans-serif;
-  background: linear-gradient(135deg, rgba(0, 24, 48, 0.7) 0%, rgba(0, 48, 96, 0.5) 100%), 
-              url('../assets/images/hero-bg.webp') no-repeat center center/cover;
+  background: linear-gradient(135deg, rgba(0, 24, 48, 0.333) 0%, rgba(0, 48, 96, 0.5) 100%), 
+              url('../assets/images/hero_comp1.png') no-repeat center center/cover;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
@@ -248,7 +248,7 @@ onMounted(() => {
   }
 
   .hero{
-    background: linear-gradient(135deg, rgba(0, 24, 48, 0.7) 0%, rgba(0, 48, 96, 0.5) 100%), 
+    background: linear-gradient(135deg, rgba(0, 24, 48, 0.307) 0%, rgba(0, 48, 96, 0.389) 100%), 
               url('../assets/images/mayak-mobile.png') no-repeat center center/cover;
   }
 }

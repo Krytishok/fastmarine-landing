@@ -27,7 +27,7 @@ const scrollToSection = (id) => {
     </div>
     
     <div class="container">
-      <div class="logo">FastMarine</div>
+      <div class="logo">Фастмарин</div>
       <nav class="nav" :class="{ active: isMenuOpen }">
         <ul>
           <li><button @click="scrollToSection('#about')" class="nav-button">О нас</button></li>
@@ -50,7 +50,7 @@ const scrollToSection = (id) => {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(2, 86, 107, 0.9);
+  background-color: rgba(89, 172, 202, 0.9);
   padding: 1.5rem 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -71,7 +71,7 @@ const scrollToSection = (id) => {
   display: block;
   width: calc(100% + 1.3px);
   height: 60px;
-  color: rgba(1, 68, 85, 0.7);
+  color: rgba(28, 105, 125, 0.7);
 }
 
 .container {

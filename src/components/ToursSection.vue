@@ -59,6 +59,69 @@ const tours = ref([
       ],
       duration: 'Длительность: 30 минут'
     }
+  },
+  {
+    id: 4,
+    title: 'Остров Скрыплёва',
+    description: 'Морская одиссея к легендарному острову-стражу входа в бухту Золотой Рог',
+    price: 10000,
+    image: new URL('../assets/images/scriplev.jpg', import.meta.url).href,
+    routeURL: 'https://www.google.com/maps/d/u/0/embed?mid=1yQvbySxlORy7agoetfNB_7fyqAj8uQA&ehbc=2E312F&noprof=1',
+    showRoute: false,
+    isLoading: false,
+    routeInfo: {
+      points: [
+        'Старт: Причал яхт-клуба',
+        'Пролив Босфор-Восточный',
+        'Русский мост',
+        'Остров Скрыплева',
+        'Маяк Басаргина',
+        'Мыс пяти пальцев'
+      ],
+      duration: 'Длительность: 1 час'
+    }
+  },
+  {
+    id: 5,
+    title: 'Два моста',
+    description: 'Уникальный тур, который позволит с воды оценить грандиозность двух визитных карточек Владивостока',
+    price: 10000,
+    image: new URL('../assets/images/two-bridges2.jpg', import.meta.url).href,
+    routeURL: 'https://www.google.com/maps/d/u/0/embed?mid=1yQvbySxlORy7agoetfNB_7fyqAj8uQA&ehbc=2E312F&noprof=1',
+    showRoute: false,
+    isLoading: false,
+    routeInfo: {
+      points: [
+        'Старт: Причал яхт-клуба',
+        'Пролив Босфор-Восточный',
+        'Русский мост',
+        'Золотой Рог',
+        'Золотой мост'
+      ],
+      duration: 'Длительность: 1 час'
+    }
+  },
+  {
+    id: 6,
+    title: 'Русский мост + о. Елены',
+    description: 'Комбинированный маршрут, объединяющий современные чудеса архитектуры и дикую природу',
+    price: 10000,
+    image: new URL('../assets/images/scriplev.jpg', import.meta.url).href,
+    routeURL: 'https://www.google.com/maps/d/u/0/embed?mid=1yQvbySxlORy7agoetfNB_7fyqAj8uQA&ehbc=2E312F&noprof=1',
+    showRoute: false,
+    isLoading: false,
+    routeInfo: {
+      points: [
+        'Старт: Причал яхт-клуба',
+        'Пролив Босфор-Восточный',
+        'Русский мост',
+        'Канал Елены',
+        'Остров Уши',
+        'Остров Елена',
+        'Токаревский маяк'
+      ],
+      duration: 'Длительность: 1 час'
+    }
   }
 ])
 
@@ -109,7 +172,7 @@ const scrollToContact = () => {
       <div class="section-header">
         <h2 class="section-title">Наши прогулки</h2>
         <div class="section-divider"></div>
-        <h3 class="info">Прогулка для 1–2 человек — 5 000₽. Если вас больше, добавляем по 1 000₽ за каждого</h3>
+        <h3 class="info">Стартовая цена указана для 1–2 человек. Если вас больше, добавляем по 1 000₽ за каждого. Катер до 6 человек</h3>
       </div>
       
       <div class="tours-grid">
@@ -228,7 +291,7 @@ const scrollToContact = () => {
 
 .info{
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(0.7rem, 4vw, 0.9rem);
+  font-size: clamp(1rem, 5vw, 1.2rem);
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 1rem;
