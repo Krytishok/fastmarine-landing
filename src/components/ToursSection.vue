@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue'
 const tours = ref([
   {
     id: 1,
-    title: 'Вокруг острова Елены',
+    title: 'Остров Елены',
     description: 'Незабываемое путешествие вокруг островов Уши и Елена. Самая популярная прогулка',
     price: 5000,
     image: new URL('../assets/images/ushi.jpg', import.meta.url).href,
@@ -24,7 +24,7 @@ const tours = ref([
   },
   {
     id: 2,
-    title: 'Под Золотой мост',
+    title: 'Золотой мост',
     description: 'Невероятное путешествие в самое сердце города. Прекрасные виды на мост и на центр города Владивосток',
     price: 5000,
     image: new URL('../assets/images/golden-bridge.jpg', import.meta.url).href,
@@ -43,7 +43,7 @@ const tours = ref([
   },
   {
     id: 3,
-    title: 'Под Русский мост',
+    title: 'Русский мост',
     description: 'Фантастическая прогулка под самый красивый мост Приморского края, виды на о. Скрыплева и ДВФУ',
     price: 5000,
     image: new URL('../assets/images/russky-bridge.webp', import.meta.url).href,

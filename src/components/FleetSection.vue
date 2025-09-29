@@ -63,9 +63,9 @@ const scrollToContact = () => {
   <section id="fleet" class="fleet-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Наш флот</h2>
+        <h2 class="section-title">Наши катера</h2>
         <div class="section-divider"></div>
-        <p class="section-subtitle">Современные и комфортабельные катера для любых прогулок</p>
+        <p class="section-subtitle">Быстрые и комфортабельные катера для любых прогулок</p>
       </div>
       
       <div class="fleet-grid">
