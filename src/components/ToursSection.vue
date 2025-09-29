@@ -106,7 +106,7 @@ const tours = ref([
     title: 'Русский мост + о. Елены',
     description: 'Комбинированный маршрут, объединяющий современные чудеса архитектуры и дикую природу',
     price: 10000,
-    image: new URL('../assets/images/scriplev.jpg', import.meta.url).href,
+    image: new URL('../assets/images/elenb.jpg', import.meta.url).href,
     routeURL: 'https://www.google.com/maps/d/u/0/embed?mid=1yQvbySxlORy7agoetfNB_7fyqAj8uQA&ehbc=2E312F&noprof=1',
     showRoute: false,
     isLoading: false,
