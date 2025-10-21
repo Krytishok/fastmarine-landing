@@ -10,6 +10,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "vite-plugin-prerender": "^1.0.8",
     "vue": "^3.5.17"
   },
   "devDependencies": {

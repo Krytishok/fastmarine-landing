@@ -11,9 +11,11 @@ import GallerySection from './components/GallerySection.vue'
 import FleetSection from './components/FleetSection.vue'
 import WaveDivider from './components/WaveDivider.vue'
 import ContactSection from './components/ContactSection.vue'
+import SeoHead from './components/SeoHead.vue'
 </script>
 
 <template>
+  <SeoHead/>
   <div class="app">
     <Header />
     <main>
