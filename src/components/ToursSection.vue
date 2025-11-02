@@ -683,7 +683,7 @@ const scrollToContact = () => {
   }
   
   .tour-image-wrapper {
-    height: 220px;
+    height: 300px;
   }
   
   .price-badge {

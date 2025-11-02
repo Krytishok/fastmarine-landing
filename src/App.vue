@@ -20,11 +20,11 @@ import SeoHead from './components/SeoHead.vue'
     <Header />
     <main>
       <HeroSection />
-      <AboutSection />
       <ToursSection />
-      <GallerySection />
       <FleetSection />
+      <AboutSection />
       <ContactSection />
+      <GallerySection />
       <LocationInfo />
     </main>
     <Footer />

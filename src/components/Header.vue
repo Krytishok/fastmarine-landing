@@ -30,11 +30,11 @@ const scrollToSection = (id) => {
       <div class="logo">Фастмарин</div>
       <nav class="nav" :class="{ active: isMenuOpen }">
         <ul>
-          <li><button @click="scrollToSection('#about')" class="nav-button">О нас</button></li>
           <li><button @click="scrollToSection('#tours')" class="nav-button">Прогулки</button></li>
-          <li><button @click="scrollToSection('#gallery')" class="nav-button">Галерея</button></li>
           <li><button @click="scrollToSection('#fleet')" class="nav-button">Флот</button></li>
+          <li><button @click="scrollToSection('#about')" class="nav-button">О нас</button></li>
           <li><button @click="scrollToSection('#contact')" class="nav-button">Контакты</button></li>
+          <li><button @click="scrollToSection('#gallery')" class="nav-button">Галерея</button></li>
         </ul>
       </nav>
       <button class="menu-toggle" @click="toggleMenu">
