@@ -20,18 +20,18 @@ const fleet = [
   },
   {
     id: 2,
-    name: "Бриз 17",
-    image: new URL('../assets/images/briz-17.jpg', import.meta.url).href,
+    name: "Yamaha FC-23",
+    image: new URL('../assets/images/Yamaha.jpeg', import.meta.url).href,
     specs: [
-      { label: "Длина", value: "5.1 м", icon: "mdi:ruler" },
-      { label: "Вместимость", value: "5 человек", icon: "mdi:account-group" },
-      { label: "Мощность", value: "70 л.с.", icon: "mdi:engine" }
+      { label: "Длина", value: "7 м", icon: "mdi:ruler" },
+      { label: "Вместимость", value: "11 человек", icon: "mdi:account-group" },
+      { label: "Мощность", value: "115 л.с.", icon: "mdi:engine" }
     ],
     features: [
       "Закрытая кабина",
       "Стереосистема Bluetooth",
       "Открытая корма без тента",
-      "Небольшая каюта"
+      "Каюта с гальюном"
     ],
   }
 ]
