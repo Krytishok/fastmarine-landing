@@ -8,7 +8,7 @@ const fleet = [
     image: new URL('../assets/images/bayliner.jpg', import.meta.url).href,
     specs: [
       { label: "Длина", value: "5.2 м", icon: "mdi:ruler" },
-      { label: "Вместимость", value: "6 человек", icon: "mdi:account-group" },
+      { label: "Вместимость", value: "5 человек", icon: "mdi:account-group" },
       { label: "Мощность", value: "150 л.с.", icon: "mdi:engine" }
     ],
     features: [
@@ -24,7 +24,7 @@ const fleet = [
     image: new URL('../assets/images/Yamaha.jpeg', import.meta.url).href,
     specs: [
       { label: "Длина", value: "7 м", icon: "mdi:ruler" },
-      { label: "Вместимость", value: "11 человек", icon: "mdi:account-group" },
+      { label: "Вместимость", value: "7 человек", icon: "mdi:account-group" },
       { label: "Мощность", value: "115 л.с.", icon: "mdi:engine" }
     ],
     features: [
