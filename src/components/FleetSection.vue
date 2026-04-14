@@ -7,7 +7,7 @@ const fleet = [
     name: "Bayliner Capri",
     image: new URL('../assets/images/bayliner.jpg', import.meta.url).href,
     specs: [
-      { label: "Длина", value: "5.2 м", icon: "mdi:ruler" },
+      { label: "Длина", value: "5.5 м", icon: "mdi:ruler" },
       { label: "Вместимость", value: "5 человек", icon: "mdi:account-group" },
       { label: "Мощность", value: "150 л.с.", icon: "mdi:engine" }
     ],
@@ -31,7 +31,7 @@ const fleet = [
       "Закрытая кабина",
       "Стереосистема Bluetooth",
       "Открытая корма без тента",
-      "Каюта с гальюном"
+      "Просторная каюта"
     ],
   }
 ]
